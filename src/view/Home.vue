@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h1>Liste des Pokémon</h1>
+    <h1>Pokémons</h1>
     <ul>
       <li v-for="pokemon in pokemons" :key="pokemon.name">
         <a @click="showDetails(pokemon.name)">{{ pokemon.name }}</a>
@@ -14,6 +14,8 @@
       <p><strong>Taille :</strong> {{ selectedPokemon.height }}</p>
     </div>
   </div>
+
+
 </template>
 
 <script>
@@ -52,15 +54,18 @@ h1 {
   text-align: center;
 }
 ul {
-  list-style: none;
+  list-style-type: none;
   padding: 0;
+  margin: 0 auto;
+  text-align: center;
 }
 li {
-  margin: 0.5rem 0;
+  margin: 30px 0;
+  font-size: 30px;
 }
 a {
   cursor: pointer;
   color: blue;
-  text-decoration: underline;
+
 }
 </style>
